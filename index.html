@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+   <meta property="og:title" content="Tell Sky Game RPG">
+    <meta property="og:description" content="RPG coperativo e curto para jogar entre amigos">
+    <meta property="og:image" content="https://xatimg.com/image/XUEqSef5nYg0.png">
+    <meta property="og:url" content="https://tsrpg-e7i2.vercel.app/">
+   <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+  <title></title>
+   
+  <script>
+    // Verifica se o usuário está logado ao acessar a página principal
+    window.onload = function() {
+      const token = localStorage.getItem('token');
+      if (!token) {
+        // Se o usuário não tiver um token, redireciona para a página de login
+        window.location.href = 'Tell-sky-beta-2-main/login.html';
+      } else {
+        // Se o usuário já estiver logado, redireciona para o dashboard
+        window.location.href = 'Tell-sky-beta-2-main/dashboard.html';
+      }
+    };
+     
+  </script>
+
+
+  <script>
+
+     if (typeof navigator.serviceWorker !== 'undefined') {
+
+      navigator.serviceWorker.register('pwabuilder-sw.jp')
+
+}
+ 
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

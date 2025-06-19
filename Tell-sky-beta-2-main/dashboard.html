@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="pt-BR"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Corrigido -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="description" content="Bem-vindo ao RPG The Last Light of the Diamond. Começo de história e aventuras emocionantes.">
+    <meta name="keywords" content="RPG, The Last Light of the Diamond, aventura, jogo, lofi, YouTube, Discord">
+    <link rel="icon" href="icon/icon.png" type="image/png">
+    <link rel="apple-touch-icon" href="icon/icon.png">
+    <link rel="stylesheet" type="text/css" href="fonts/gamefont.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Tell Sky</title>
+    <script src="js/auth.js" defer></script>
+    <style>
+        
+        .Xat {
+            position: absolute;
+            top: 15%;
+            left: 0%;
+            height: 500px;
+            max-width: 365px;
+            aspect-ratio: 5 / 4;
+            z-index: 1;
+            border: 8px double;
+            border-radius: 10px;
+            animation: bordaColorida 2s infinite;
+        }
+        .video-container {
+            position: absolute;
+            height: 460px;
+            max-width: 700px;
+            zoom: 50%;
+            aspect-ratio: 16 / 9;
+            top: 15%;
+            left: 74%;
+            border: 8px double;
+            border-radius: 10px;
+            animation: bordaColorida 2s infinite;
+            z-index: 1;
+        
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+         
+         #logout {
+            position: absolute;
+            height: 30px;
+            width: 50px;
+            top: 10%; 
+            left: 94%;
+            background-image: url(css/1000_F_201993018_MbiaXCQ44EApTQtkREcl2C2iVZVY6WGI.jpg);
+            color: aqua;
+            
+        
+         }   
+             
+            #loginerror {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 2;
+            color: yellow;
+        }
+        #loginerror img {
+            max-width: 400px;
+            width: 100%;
+        }
+            
+
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('css/51176444e7992898f5be7f90c447c6f9f6139d1b_hq.gif');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            z-index: -10;
+        }
+        .imagem {
+            position: absolute;
+            top: -2%;
+            left: 43%;
+            width: 15%;
+            height: 15%;
+            background-image: url('css/upg.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            z-index: -2;
+        }
+        .background-image-wrapper {
+            position: absolute;
+            display: Flex ;
+            width: 816px;
+            height: 622px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border: 8px double;
+            border-radius: 10px;
+            animation: bordaColorida 2s infinite;
+            z-index: 1;
+            transform: scale(0.8);
+        }
+        
+        .cursor {
+            position: absolute;
+            width: 55px;
+            height: 55px;
+            border: none;
+            background: transparent;
+            pointer-events: none;
+            z-index: 9999;
+            background-image: url('cursors/ezgif-7.gif');
+            background-size: cover;
+            transition: background-image 0.1s ease-in-out;
+        }
+        .video-form { position: absolute;
+             top: 55%; 
+             left: 87%; 
+             transform: translate(-50%, -50%); 
+             z-index: 1;
+             
+         
+         } 
+         -ms-input-placeholder {
+            color: green ; 
+            animation: Color 2s infinite ;
+
+           }
+             
+         .video-form input { 
+            width: 310px; 
+            padding: 20px;
+            background-image: url(css/anime_and_pixel_art_collab_by_thatswitchkid_dfcx1vh-fullview.jpg);
+            border-color: rgb(148, 42, 116);
+            z-index: 1;
+         } 
+                 
+          .video-form button { 
+            padding: 10px; 
+            cursor: pointer;
+            color: purple;
+            border-color: rgb(148, 42, 116);
+            background-image: url(css/1000_F_201993018_MbiaXCQ44EApTQtkREcl2C2iVZVY6WGI.jpg);
+         }
+        
+        @keyframes bordaColorida {
+            0% { border-color: rgb(255, 0, 0); }
+            25% { border-color: rgb(15, 241, 15); }
+            50% { border-color: rgb(93, 18, 214); }
+            75% { border-color: rgb(241, 241, 27); }
+            100% { border-color: rgb(248, 26, 137); }
+        }
+
+        @keyframes Color {
+            0% { color: rgb(255, 0, 0); }
+            25% { color: rgb(15, 241, 15); }
+            50% { color: rgb(93, 18, 214); }
+            75% { color: rgb(241, 241, 27); }
+            100% { color: rgb(248, 26, 137); }
+        }
+
+        .informe { 
+            position: absolute;
+            top: -2%;
+            left: 33%;
+            width: 200px;
+            height: 100px;
+            background-image: url(css/shigure-ui-dance.gif);
+            z-index: -1;
+
+        }
+         
+        .discord { 
+            display: flex;
+            position: absolute;
+            justify-content: space-between;
+            cursor: pointer;
+            top: 5% ;
+            left:78% ;   
+            gap: 30px;      
+            
+        }
+
+
+        .discord img {
+         border-radius: 5px; /* Opcional: deixa as bordas arredondadas */
+         transition: transform 0.3s; /* Animação ao passar o mouse */
+        }
+
+        .discord img:hover {
+         transform: scale(1.4); /* Amplia a imagem ao passar o mouse */
+        }
+
+        .informe2 { 
+            position: absolute;
+            top: -2%;
+            left: 53%;
+            width: 200px;
+            height: 100px;
+            background-image: url(css/shigure-ui-dance.gif);
+            z-index: -1;
+
+        }
+          
+
+        
+        .informe3 {
+            position: absolute;
+            display: flex;
+            top: 46.4%;
+            left: 75%;
+            width: 500px;
+            height: 500px;
+            transform: scale(0.2);
+            background-image: url(css/8370237.png);
+            cursor: pointer ; 
+
+
+        }
+
+
+        .loli {
+            position: absolute;
+            display: flex;
+            top: 48%;
+            left: 70%;
+            width: 380px;
+            height: 380px;
+            transform: scale(0.5);
+            background-image: url(css/Loli2\.png);
+            cursor: pointer ; 
+            z-index: -1;
+
+        }
+           
+        .modal {
+            display: none; /* Escondido por padrão */
+            position: fixed;
+            z-index: 4;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro */
+        }
+
+        /* Conteúdo do modal */
+        .modal-content {
+            background-color: white;
+            margin: auto;
+            overflow: auto;
+            padding: 19px;
+            border: 2px solid #64136b;
+            width: 40%; 
+            background-image: url(css/ezgif-4-c120a182e1.gif);
+            border-radius: 10px;
+            animation: bordaColorida 2s infinite;
+    
+        }
+
+        /* Botão de fechar */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 38px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .texto-Branco {
+            color: rgb(214, 207, 247); /* Texto verde */
+        }
+          
+        .texto-Color { 
+            position: absolute;
+            top: 89%;
+            left: 52%;
+            animation: Color 2s infinite ;
+
+        }
+
+
+    </style>
+</head>
+<body> 
+    <div class="content">teste</div>
+    <div class="video-form">
+        <input type="text" id="videoLink" placeholder="Cole o link do YouTube aqui">
+        <button onclick="carregarVideo()">Carregar Vídeo</button>
+    </div>
+    <div class="imagem" alt="Imagem exemplo"></div>
+    <div class="background-image"></div>
+    <div class="cursor"></div>
+    <div class="video-container" id="videoPlayer">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/TtkFsfOP9QI?si=9dUTrT75x4568RBS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="Xat"> 
+        <iframe src="https://xat.com/embed/chat.php#id=220528838&gn=RPGTellSky" width="650" height="486" frameborder="0" scrolling="no"></iframe><br><small><a target="_BLANK" href="https://xat.com/web_gear/chat/embed.php?id=220528838&GroupName=RPGTellSky">Get RPGTellSky chat group</a> | <a target="_BLANK" href="https://xat.com/RPGTellSky"> Go to RPGTellSky website</a></small><br>
+    </div>
+    <div class="informe"></div>
+    <div class="informe2"></div>
+    <div class="discord">
+        <a href="https://discord.gg/jtRUr8v2zs">
+        <img src="css/discordia.png" alt="" width="50" height="51">
+        </a>
+    
+
+        <a href="https://github.com/Dufortss">
+        <img src="css/github.png" alt="" width="50" height="51" >
+        </a>
+
+        <a href="https://tsrpg-e7i2.vercel.app/Tell-sky-beta-2-main/Tell Sky_1_1.0.apk">
+        <img src="css/celular (1).png" alt="" width="50" height="51" >
+        </a>
+    </div>
+
+
+    <div class="informe3" onclick="openModal()"></div>
+      
+    <div class="logout">
+        <button id="logout">Sair</button>
+    </div>
+    
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 class="texto-Branco">Informações adicionais do jogo</h2>
+            <p class="texto-Branco">Para Abrir o Menu Clike = [ x ] OU [ Esc]</p>
+            <p class="texto-Branco"> Para Abrir o Chat do RPG Clika [ T ]</p>
+            <p class="texto-Branco">Para trocar de Itens Clike sobre outro jogador [ Mouse Direito]</p>
+        </div>
+    </div>
+
+    <div class="loli"></div>   
+    <div id="loginerror" style="display: none;">
+        <img src="css/BMwi.gif" alt="Login Error">
+           <p>Por favor, insira um link válido do YouTube</p>
+    </div>
+
+    <script>
+function carregarVideo() {
+    const link = document.getElementById("videoLink").value;
+    const videoId = link.match(/(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
+
+    if (videoId) {
+        const embedLink = `https://www.youtube.com/embed/${videoId[1]}`;
+        document.getElementById("videoPlayer").innerHTML = `
+            <iframe 
+                src="${embedLink}" 
+                frameborder="0" 
+                allow="autoplay; encrypted-media" 
+                allowfullscreen 
+                style="width: 100%; height: 315px;">
+            </iframe>`;
+        
+        // Oculta a mensagem de erro, se estiver visível
+        document.getElementById('loginerror').style.display = 'none';
+    } else {
+        // Define uma mensagem de erro direta
+        const errorElement = document.getElementById('loginerror');
+        errorElement.style.display = 'flex'; // Mostra o erro 
+        setTimeout(() => {
+            errorElement.style.display = 'none'; // Oculta após 3 segundos
+        }, 3500);
+    }
+}
+
+
+    </script>
+
+        <script>
+             // Script para o logout
+              const logoutButton = document.getElementById('logout');
+
+               logoutButton.addEventListener('click', () => {
+              // Remove o token de autenticação do localStorage
+                  localStorage.removeItem('token');
+
+           // Redireciona para a página de login ou qualquer outra página de sua escolha
+                   window.location.href = 'login.html'; // Ajuste conforme necessário
+               });
+
+        </script>
+        
+    <script>
+        document.addEventListener('mousemove', (e) => {
+            const cursor = document.querySelector('.cursor');
+            cursor.style.left = `${e.pageX}px`;
+            cursor.style.top = `${e.pageY}px`;
+        });
+
+        document.addEventListener('mousedown', () => {
+            const cursor = document.querySelector('.cursor');
+            cursor.style.backgroundImage = "url('cursors/cursor-clicked.gif')";
+        });
+
+        document.addEventListener('mouseup', () => {
+            const cursor = document.querySelector('.cursor');
+            cursor.style.backgroundImage = "url('cursors/ezgif-7.gif')";
+        });
+
+        // Funções para abrir e fechar o modal
+        function openModal() {
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+
+        // Fecha o modal se clicar fora da área de conteúdo
+        window.onclick = function(event) {
+            var modal = document.getElementById("myModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+  
+    
+    
+    </script>
+    <div class="background-image-wrapper">
+        <script src="js/libs/pixi.js" defer></script>
+    <script src="js/libs/pixi-tilemap.js" defer></script>
+    <script src="js/libs/pixi-picture.js" defer></script>
+    <script src="js/libs/fpsmeter.js" defer></script>
+    <script src="js/libs/lz-string.js" defer></script>
+    <script src="js/libs/iphone-inline-video.browser.js" defer></script>
+    <script src="js/rpg_core.js" defer></script>
+    <script src="js/rpg_managers.js" defer></script>
+    <script src="js/rpg_objects.js" defer></script>
+    <script src="js/rpg_scenes.js" defer></script>
+    <script src="js/rpg_sprites.js" defer></script>
+    <script src="js/rpg_windows.js" defer></script>
+    <script src="js/plugins.js" defer></script>
+    <script src="js/main.js" defer></script>
+    </div>
+
+</body>
+</html>

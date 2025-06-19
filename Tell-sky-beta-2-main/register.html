@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-adsense-account" content="ca-pub-7577214992958110">
+  <title>Cadastro</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="icon/icon.png" type="image/png">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7577214992958110"
+     crossorigin="anonymous"></script>
+  
+
+  <style>
+    .background-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('css/51176444e7992898f5be7f90c447c6f9f6139d1b_hq.gif');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      z-index: -10;
+    }
+
+    .cursor {
+      position: absolute;
+      width: 55px;
+      height: 55px;
+      pointer-events: none;
+      z-index: 9999;
+      background-image: url('cursors/ezgif-7.gif');
+      background-size: cover;
+      transition: background-image 0.1s ease-in-out;
+    }
+
+    .register-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 400px;
+      padding: 40px;
+      background: rgba(0, 0, 0, 0.8);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      color: white;
+    }
+
+    .register-container h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .register-container input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: none;
+      background-color: #ddd;
+    }
+
+    .register-container button {
+      width: 100%;
+      padding: 10px;
+      background-color: purple;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .register-container button:hover {
+      background-color: #5a0081;
+    }
+  </style>
+</head>
+<body>
+  <div class="background-image"></div>
+  <div class="cursor"></div>
+
+  <div class="register-container">
+    <h2>Cadastro</h2>
+    <form id="register-form">
+      <label>Nome:</label>
+      <input type="Username" id="name" name="name" required>
+      <label>Email:</label>
+      <input type="email" id="email" name="email" required>
+      <label>Senha:</label>
+      <input type="password" id="password" name="password" required>
+      <button type="submit">Cadastrar</button>
+    </form>
+    
+  </div>
+
+  <script>
+    const apiUrl = 'https://tsrpg-production.up.railway.app'; // URL do backend
+
+    // Custom cursor
+    document.addEventListener('mousemove', (e) => {
+      const cursor = document.querySelector('.cursor');
+      cursor.style.left = `${e.pageX}px`;
+      cursor.style.top = `${e.pageY}px`;
+    });
+
+    document.addEventListener('mousedown', () => {
+      const cursor = document.querySelector('.cursor');
+      cursor.style.backgroundImage = "url('cursors/cursor-clicked.gif')";
+    });
+
+    document.addEventListener('mouseup', () => {
+      const cursor = document.querySelector('.cursor');
+      cursor.style.backgroundImage = "url('cursors/ezgif-7.gif')";
+    });
+
+    // Registro de usuário
+    const registerForm = document.getElementById('register-form');
+    registerForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+
+      // Captura os valores dos inputs
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      try {
+        const response = await fetch(`${apiUrl}/api/auth/register`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name, email, password }),
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+          alert('Cadastro realizado com sucesso!');
+          localStorage.setItem('token', data.token); // Salva o token no localStorage
+          window.location.href = 'dashboard.html'; // Redireciona para a dashboard
+        } else {
+          alert(data.msg || 'Erro ao registrar. Verifique os dados.');
+        }
+      } catch (error) {
+        console.error('Erro:', error);
+        alert('Erro ao conectar ao servidor.');
+      }
+    });
+  </script>
+</body>
+</html>

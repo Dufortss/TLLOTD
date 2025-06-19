@@ -1,0 +1,11 @@
+[
+    {
+        "chat": {
+            "inOutChatWindow": "tab",
+            "sayToChat": "t",
+            "trade": "q",
+            "pvp": "e"
+        }
+    }
+]
+    

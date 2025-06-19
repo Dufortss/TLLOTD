@@ -1,0 +1,192 @@
+[
+    {
+        "maxLines": 9,
+        "firstLineMarginX": 8,
+        "firstLineMarginY": 136,
+        "spaceBetweenLines": 18,
+        "lineStartPositionX": -300,
+        "position": [0, "Graphics.height - 154"],
+        "sayButtonPosition": [308, 0],
+        "background": {
+            "width": 320,
+            "heigth": 154,
+            "opacity": 120,
+            "color": "#000000"
+        },
+        "buttons": {
+            "showChatButton": {
+                "mainImg": "ChatButtonShow_00",
+                "hoverImg": "ChatButtonShow_01",
+                "pressedImg": "ChatButtonShow_01",
+                "marginX": 308,
+                "marginY": 0
+            },
+            "sayButton": {
+                "mainImg": "ChatButtonSay_00",
+                "hoverImg": "ChatButtonSay_01",
+                "pressedImg": "ChatButtonSay_01",
+                "marginX": 326,
+                "marginY": 112
+            }
+        },
+        "unhoveredChatOpacity": 140
+    },
+    {
+        "miniBorderImage": "chatBorder",
+        "miniBorderMarginX": 0,
+        "miniBorderMarginY": 0,
+        "notifyIconImage": "ChatNotifyIcon",
+        "notifyIconMarginX": 5,
+        "notifyIconMarginY": -10,
+        "text": {
+            "textZoneWidth": 20,
+            "textZoneHeight": 20,
+            "visible": true,
+            "marginX": 4,
+            "marginY": 3,
+            "position": "center",
+            "outlineColor": null,
+            "outlineWidth": 2,
+            "fontFace": "KhmerUIb",
+            "textColor": "#D1CC8B",
+            "fontSize": 13,
+            "fontItalic": false
+        }
+    },
+    {
+        "chatLineWidth": 310,
+        "chatLineHeight": 18,
+        "background": {
+            "opacity": 120,
+            "color": "#000000",
+            "opacityInQueue": 180
+        },
+        "channelText": {
+            "textZoneWidth": 40,
+            "textZoneHeight": 18,
+            "visible": true,
+            "marginX": 4,
+            "marginY": -1,
+            "position": "left",
+            "outlineColor": null,
+            "outlineWidth": 2,
+            "fontFace": "KhmerUI",
+            "textColor": "#FFFFFF",
+            "fontSize": 12,
+            "fontItalic": false
+        },
+        "nameText": {
+            "textZoneWidth": 46,
+            "textZoneHeight": 18,
+            "visible": true,
+            "marginX": 40,
+            "marginY": -1,
+            "position": "left",
+            "outlineColor": null,
+            "outlineWidth": 2,
+            "fontFace": "KhmerUIb",
+            "textColor": "#FFFFFF",
+            "fontSize": 15,
+            "fontItalic": false
+        },
+        "text": {
+            "textZoneWidth": 214,
+            "textZoneHeight": 18,
+            "visible": true,
+            "marginX": 90,
+            "marginY": -1,
+            "position": "left",
+            "outlineColor": null,
+            "outlineWidth": 2,
+            "fontFace": "KhmerUI",
+            "textColor": "#D7D7D7",
+            "fontSize": 14,
+            "fontItalic": false
+        }
+
+    },
+    {
+        "NameColor": "#FF8040",
+        "UserNameColor": "#A83D0F",
+        "ChannelColors": [
+            "#0F714F",
+            "#8C8CFF"
+        ]
+    },
+    {
+        "position": ["(Graphics.boxWidth / 2) - 260", "Graphics.boxHeight - 120"],
+        "width": 520,
+        "height": 120,
+        "backgroundBlend": [32, 32, 32, 128],
+        "sendButton": {
+            "mainImg": "ChatButton_Send_00",
+            "hoverImg": "ChatButton_Send_01",
+            "pressedImg": "ChatButton_Send_02",
+            "marginX": 440,
+            "marginY": 80
+        },
+        "channelButtonImages": {
+            "mainImg": "ChatButton_Channel_00",
+            "hoverImg": "ChatButton_Channel_01",
+            "pressedImg": "ChatButton_Channel_01",
+            "selectedImg": "ChatButton_Channel_03"
+        },
+        "channelButtonA": {
+            "marginX": 18,
+            "marginY": 0,
+            "text": {
+                "textZoneWidth": 80,
+                "textZoneHeight": 30,
+                "visible": true,
+                "marginX": 10,
+                "marginY": 0,
+                "position": "center",
+                "outlineColor": null,
+                "outlineWidth": 2,
+                "fontFace": "KhmerUIb",
+                "textColor": "#D1CC8B",
+                "fontSize": 16,
+                "fontItalic": false
+            },
+            "caption": "[ALL]"
+        },
+        "channelButtonB": {
+            "marginX": 118,
+            "marginY": 0,
+            "text": {
+                "textZoneWidth": 80,
+                "textZoneHeight": 30,
+                "visible": true,
+                "marginX": 10,
+                "marginY": 0,
+                "position": "center",
+                "outlineColor": null,
+                "outlineWidth": 2,
+                "fontFace": "KhmerUIb",
+                "textColor": "#D1CC8B",
+                "fontSize": 16,
+                "fontItalic": false
+            },
+            "caption": "[MAP]"
+        },
+        "maxInputTextLength": 48,
+        "backgroundImage": "ChatInputBackground",
+        "marginX": 20,
+        "marginY": 30,
+        "inputText": {
+            "textZoneWidth": 520,
+            "textZoneHeight": 50,
+            "visible": true,
+            "marginX": 40,
+            "marginY": 30,
+            "position": "center",
+            "outlineColor": null,
+            "outlineWidth": 3,
+            "fontFace": null,
+            "textColor": "#FFFFFF",
+            "fontSize": 18,
+            "fontItalic": false
+        }
+        
+    }
+]

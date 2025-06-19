@@ -1,0 +1,47 @@
+[
+    {
+        "backgroundColor": {
+            "colorA": "#000000",
+            "colorB": "#000000"
+        },
+        "backgroundColorOpacity": 100,
+        "backPicture": null,
+        "width": 54,
+        "height": 18,
+        "textSize": 12,
+        "textFont": null,
+        "textColor": null,
+        "textOutColor": null,
+        "textOutWidth": 3,
+        "textItalic": false
+    },
+    {
+        "backgroundColor": null,
+        "backgroundColorOpacity": 50,
+        "backPicture": "adminName",
+        "width": 64,
+        "height": 22,
+        "textSize": 12,
+        "textFont": "Tahoma",
+        "textColor": null,
+        "textOutColor": "#FF0000",
+        "textOutWidth": 3,
+        "textItalic": false
+    },
+    {
+        "backgroundColor": {
+            "colorA": "#008080",
+            "colorB": "#00CCCC"
+        },
+        "backgroundColorOpacity": 50,
+        "backPicture": "borderName",
+        "width": 54,
+        "height": 18,
+        "textSize": 14,
+        "textFont": "Consolas",
+        "textColor": "#FFFF80",
+        "textOutColor": null,
+        "textOutWidth": 2,
+        "textItalic": true
+    }
+]
